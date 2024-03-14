@@ -190,14 +190,22 @@ z-index: -1;
   box-shadow: 0 0 0.5rem 0.3rem black;
 }
 
-@media(max-width:912px){
-  #my_image{width: 22rem;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 0.5rem 0.3rem black;
+@media (max-width: 430px) {
+  .HomePage{
+    height:100%;
+    gap: 10rem;
   }
+  #my_image {
+      width: 15rem;
+      height:15rem;
+      margin:0 0 1rem 0;
+  }
+  .HomePage #frontInfo .greet{
+    padding-top: 1rem;
+  }
+}
+.HomePage #frontInfo{
+  height: fit-content;
 }
 
 #my_image{
