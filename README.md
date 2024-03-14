@@ -34,8 +34,7 @@ I am Dhanendra Rahangdale, a Front-end wev developer passionate about building a
 ## Contact Information
 
 - **Email:**  drrahangdale01@gmail.com
-- **LinkedIn:** 
-- **Portfolio Website:** 
-- **GitHub:** 
+- **LinkedIn:** https://www.linkedin.com/in/dhanendra-g-r-/
+- **GitHub:**  https://github.com/Drcodepro
 
 Feel free to reach out to me via email or LinkedIn. I'm open to collaboration opportunities and would love to connect with you!
