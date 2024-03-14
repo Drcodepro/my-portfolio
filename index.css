@@ -176,6 +176,12 @@ z-index: -1;
   background-color: rgba(0, 0, 0, 0.32);
 }
 
+@media(min-height:800){
+  .HomePage{
+    height:100%;
+  }
+}
+
 .HomePage .ProfileLink a img{
   width: 22rem;
   height: 22rem;
