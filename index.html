@@ -22,6 +22,11 @@
       href="/assets/images/favicon.png"
       type="image/x-png"
     />
+
+
+<!--  TILT JS LIBRARY -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
   </head>
 
   <body>
@@ -93,7 +98,11 @@
             /></a>
           </div>
         </div>
-        <img src="./Poster_Img.jpg" alt="my_img" id="my_image" />
+        <div class="tilt" data-tilt >
+          <img src="./Poster_Img.jpg" alt="my_img" id="my_image"  />
+        </div>
+      
+        
       </div>
     </section>
 
@@ -107,12 +116,12 @@
         <div class="my_info">
           <h2 style="color: rgb(24, 0, 160);">🙏 I'm Dhanendra Rahangdale</h2>
           <p>
-            I am <b>Skilled Front-End Developer </b>pursuing
+            I am <b>Skilled Front-End Developer </b>complete
             <b>B.Tech</b>(Agricultural Engineering) from Swami Vivekanada
             university Sagar ,I am very passionate about improving my coding
-            skills & developing native applications. I am good at
+            skills & developing web applications. I am good at
             <b>
-              Javascript,React.js,Html,css,Bootstarap,redux,Java,git & github.</b> <br> As a passionate front-end developer, I bring creativity and precision to every project.My dedication to staying abreast of the latest technologies ensures that I deliver modern and visually stunning websites that leave a lasting impression."
+              Javascript,React.js,Html,css,Tailwind css,redux,Java,git & github.</b> <br> As a passionate front-end developer, I bring creativity and precision to every project.My dedication to staying abreast of the latest technologies ensures that I deliver modern and visually stunning websites that leave a lasting impression."
           </p>
           <p>
             <span style="color: blue; font-weight: 600">Email : </span
@@ -159,6 +168,16 @@
           </div>
 
           <div class="skill_cards">
+            <img src="./assets/structure.png" alt="" />
+            <p>React.js</p>
+          </div>
+
+          <div class="skill_cards">
+            <img src="./assets/Redux_icon.png" alt="" />
+            <p>Redux</p>
+          </div>
+
+          <div class="skill_cards">
             <img src="./assets/html.png" alt="" />
             <p>html</p>
           </div>
@@ -169,13 +188,8 @@
           </div>
 
           <div class="skill_cards">
-            <img src="./assets/bootstrap (1).png" alt="" />
-            <p>Bootstarap</p>
-          </div>
-
-          <div class="skill_cards">
-            <img src="./assets/structure.png" alt="" />
-            <p>React.js</p>
+            <img src="./assets/tailwind_css_icon.png" alt="" />
+            <p>Tailwind css</p>
           </div>
 
           <div class="skill_cards">
@@ -192,6 +206,12 @@
             <img src="./assets/algorithm.png" alt="" />
             <p>DSA-Problem solving</p>
           </div>
+
+          <div class="skill_cards">
+            <img src="./assets/OOP_icon.png" alt="" />
+            <p>Object-Oriented Programming</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -241,7 +261,7 @@
           <div class="image">
             <img
               draggable="false"
-              src="./assets/schoolIMAGE.jpg"
+              src="./assets/school.jpg"
               alt="school Poster"
             />
           </div>
@@ -254,6 +274,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- footer section starts -->
     <div class="footer" id="ContactPage">
@@ -314,5 +335,14 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+      // Initialize Tilt.js
+      VanillaTilt.init(document.querySelectorAll(".tilt"), {
+          max: 25,
+          speed: 400,
+          "max-glare": 0.5,
+      });
+  </script>
+
   </body>
 </html>
