@@ -1,0 +1,836 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+html::-webkit-scrollbar{
+  width: 0.3rem;
+}
+html::-webkit-scrollbar-track{
+  background: rgb(250, 232, 255);
+}
+html::-webkit-scrollbar-thumb{
+  background: #000f98;
+}
+
+ #Header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 2rem;
+    height: 3rem;
+    z-index: 1000 ;
+} 
+
+
+/* Background color on scroll */
+
+#Header.scrolled {
+  background-color: #000000;
+}
+
+
+#Header #logo{
+    color:gold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+}
+
+#Header #logo img{
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+
+#Header .navbar ul{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none
+} 
+
+#Header .navbar ul li a{
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+}
+#Header .navbar ul li:hover{
+  transform: scale(1.2);
+}
+#Header .navbar ul li a:hover{
+  transform: scale(1.2);
+  text-decoration-color: rgba(255, 255, 255, 1);;
+}
+
+
+/* *******   css for toggle the nav bar   *********** */
+
+
+#Header .navbar.nav-toggle {
+  top:5%;
+  right: 0;
+  width: 50%;
+}
+
+#Header .navbar.nav-toggle ul {
+  flex-flow: column;
+  align-items: center;
+  overflow-y: auto; 
+}
+
+#Header .navbar.nav-toggle ul li {
+  text-align: center;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+#Header .navbar.nav-toggle ul li a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+
+#menu{
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: none;
+    position: fixed;
+    left: 87%;
+}
+  
+@media(max-width:912px){
+    #menu{
+        display: block;
+    }
+    #Header .navbar{
+      position: fixed;
+      top: 6.5rem; right: 100%;
+      width: 75%;
+      height: 100%;
+      text-align: left;
+      align-items: flex-start;
+      background-color: #0e0f31;
+    }
+
+    #Header .navbar ul{
+      flex-flow: column;
+      padding: 1rem;
+    }
+
+    #Header .navbar ul li{
+      text-align: center;
+      width: 100%;
+      margin: 1rem 0;
+      border-radius: .5rem;
+      width: 26rem;
+    }
+    #Header .navbar ul li a{
+      display: block;
+      padding: 1rem;
+      text-align: left;
+      color: #fff;
+      font-size: 2rem;
+    }
+} 
+
+
+
+
+
+.backCover{
+object-fit: cover;
+position:fixed;
+z-index: -1;
+} 
+
+
+/********    Home Page  css   ***********/
+
+.HomePage{
+  width: 100%;
+  height:100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17rem; 
+  background-color: rgba(0, 0, 0, 0.32);
+}
+
+.HomePage .ProfileLink a img{
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0.5rem 0.3rem black;
+}
+
+#my_image{
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0.5rem 0.3rem black;
+
+  transform:
+  perspective(800px)
+  rotateY(30deg) scale(0)
+  rotateX(30deg);
+  transition: transform 2s ease;
+}
+
+@media (max-width: 430px) {
+  .HomePage{
+    height:100%;
+    gap: 10rem;
+  }
+  #my_image {
+      width: 15rem;
+      height:15rem;
+      margin:0 0 1rem 0;
+  }
+  .HomePage #frontInfo .greet{
+    padding-top: 1rem;
+  }
+}
+.HomePage #frontInfo{
+  height: fit-content;
+}
+
+
+/* New class for animation */
+.HomePage #my_image.rotate { 
+  transform: perspective(800px) rotateY(360deg) scale(1.1); 
+  /* &:hover {
+    transform:
+    perspective(800px)
+    rotateY(30deg)
+    scale(0.9)
+    rotateX(10deg);
+    opacity: 1;
+  } */
+}
+
+.tilt {
+  width:fit-content;
+  height:fit-content;
+  background-color: transparent;
+}
+
+
+#cursor-blur{
+  position:fixed;
+  height: 10rem;
+  width: 10rem;
+  background-color: rgb(183, 0, 255);
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+#cursor{
+  position:fixed;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(183, 0, 255);
+  filter: blur(4px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index:99;
+}
+
+@media (max-width: 912px) {
+  #cursor{
+    display: none;
+  }
+  #cursor-blur{
+    display: none;
+  }
+}
+.HomePage #frontInfo .greet{
+margin-top: 1rem;
+color:  #000000;
+font-size: 3.5rem;
+text-shadow:-0.3rem 0 rgb(97, 0, 189);;
+-webkit-text-stroke: 1px  #e8e8e8;
+}
+
+.HomePage #frontInfo .firstName{
+color: #ffffff;
+font-size:1.8rem ;
+text-shadow:-0.1rem 0 #000000;
+}
+
+.HomePage #frontInfo .lastName{
+  color: rgb(0, 0, 0);
+  text-shadow:-0.1rem 0 rgb(255, 255, 255)
+}
+
+.typing_text{
+  color: rgb(97, 0, 189); 
+  -webkit-text-stroke: 1px  #e8e8e8;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.HomePage #frontInfo button{
+  background-color: rgb(3, 0, 204);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 0.2rem 0.2rem rgb(0, 0, 0) ;
+  border: none;
+  border-radius: 1rem;
+  box-shadow:0 0 0.5rem 0.3rem black ;
+  margin: 1rem 0 2rem 0;
+  width: 6rem;
+  height: 2rem;
+}
+#about-btn{
+color: white; 
+text-decoration: none;
+}
+
+.HomePage #frontInfo button:hover{
+  font-size:1.2rem ;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.HomePage #frontInfo .ProfileLink img{
+width: 2rem;
+height: 2rem;
+margin-right: 1rem;
+}
+.HomePage #frontInfo .ProfileLink img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+@media(max-width:1024px){
+  .HomePage{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 1rem;
+    width: 100vw;
+  }
+  
+}
+
+
+
+/*********   about page css ***********/
+
+.aboutPage{
+  width: 100%;
+  height:100vh;
+  background-color: #1A1831;
+  box-sizing: 0 0 ;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items:center; 
+}
+
+.about_info_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  opacity: 0;
+  transform: scaleY(0) scalex(0);
+  transition: all 0.5s ease-out;
+}
+
+.aboutPage .about_info_container .my_info{
+  background-color: rgb(155, 155, 155);
+  box-shadow: 0 0 1rem 0.3rem rgb(0, 0, 0);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  width: 60%;
+  color: #420000;
+}
+
+@media (max-width: 1024px) {
+  .aboutPage {
+    height: fit-content;
+    width: 100%; /* Use viewport width for full width */
+    flex-direction:column;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 0.5rem 6rem 0.5rem;
+  }
+  .aboutPage .about_info_container .my_info{
+    width: 90vw; /* Ensure the box doesn't exceed the width of the viewport */
+    overflow: auto;
+    overflow-wrap: break-word;
+    padding:1rem;
+  }
+  .aboutPage .about_info_container{
+    display: flex;
+    justify-content: start;
+    align-items:center ;
+  }
+}
+
+/* animation css for the about info */
+.my_info_anime{
+  opacity: 1;
+  transform: scaleX(1) scaleY(1);
+}
+
+.about_info_container .my_info p,h2{
+  margin-bottom: 1rem;
+}
+
+#about_info_button{
+  background-color: rgb(3, 0, 204);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1em;
+  font-weight: 600;
+  width:7em;
+  height: 3em;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+#about_info_button:hover #arrow {
+  transform: translateX(10px); /* Adjust the distance you want the arrow to move */
+}
+
+
+
+
+/******** skills page css *********/
+
+.skillsPage .skill_heading{
+  display: flex;
+  justify-content: center;
+  align-items:start; 
+  gap: 0.5rem;
+}
+
+.skillsPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #12125f;
+  border-top: solid 1px #000000;
+  color: wheat;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my_Skills {
+  background-color: #00000066;
+  width: 70em;
+  height:90%;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center ;
+  gap: 1rem;
+  padding: 2rem;
+  margin-top: 4rem;
+  opacity: 0;
+  transform: scaleY(0) scalex(0);
+  transition: all 0.4s ease-out;
+}
+
+/* skills page animation */
+
+.my_skills_anim{
+  opacity: 1;
+  transform: scaleX(1) scaleY(1);
+}
+
+
+.my_Skills .skill_cards {
+  width: 10em;
+  height: 7em;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  padding:0.5rem;
+}
+
+.my_Skills .skill_cards img {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: 912px) {
+  .skillsPage {
+    width: 100%;
+    height:fit-content;
+  }
+  .my_Skills {
+    width: 100%;
+    padding:2rem 1rem 1rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .my_Skills .skill_cards {
+    width: calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+/********** projectPage styling ************/
+
+
+.projectPage{
+  width: 100%;
+  height:fit-content;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-left: 5rem;
+}
+
+
+.All_project_container{
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  height: fit-content;
+  opacity: 0; /* Set initial opacity to 0 */
+  transform: scaleX(0) scaleY(0);
+  transition: all 0.5s ease-out; /* Apply transition */
+}
+
+.project_box {
+  position: relative;
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px 1px blanchedalmond;
+  &:hover .content{
+      top:100%;
+      transform: translateY(-100%); 
+      transition: all 0.3s ease-in;
+  }
+  &:hover{
+    transform:
+    perspective(700px)
+    rotateY(0deg)
+    rotateX(15deg);
+    transition: transform 0.6s ease;
+  }
+}
+
+.project_box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.All_project_container .content {
+  position: absolute;
+  top: 100%;    /* 100% */
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform: translateY(-24%);       /* -24% */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+
+
+.project_tag{
+  width: 100%;
+  background-color: #fffb00;
+  color: black;
+  height: fit-content;
+  padding: 0.3rem;
+  text-align: center;
+  border-bottom: solid 1px black;
+  border-top:  solid 1px black;
+}
+.description {
+  color: #000000;
+  padding: 0.6rem 0.3rem 0.3rem 0.3rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding:0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius:0.5rem;
+  &:hover{
+    background-color: #02a22f ;
+  }
+}
+
+
+@media (max-width: 912px) {
+  .projectPage {
+    padding-left: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .All_project_container {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .project_box {
+    width: 100%; /* Make the project boxes take full width on smaller screens */
+    overflow: hidden; /* Allow height to adjust based on content */
+  }
+}
+
+
+
+.content-visible {
+  opacity: 1; /* Set opacity to 1 when the animation is triggered */
+  transform: scaleX(1) scaleY(1);
+}
+
+
+
+
+/* education Page css Starts here */
+
+.educationPage{
+  background-color: #d6eff6;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.education_container{
+width: fit-content;
+height: fit-content;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+
+opacity: 0;
+transform: scaleX(0) scaleY(0);
+transition: all 0.5s ease-out;
+}
+
+.educationPage .qoute{
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.education_container .box{
+  width:70%;
+  height: 11rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  gap: 1rem;
+  border: solid 1px black;
+  box-shadow: 0 0 10px 1px rgb(86, 86, 86);
+  &:hover{box-shadow: 0 0 10px 3px rgb(86, 86, 86);}
+}
+
+
+.education_container .box image{
+  width: 15rem;
+  height: 11rem;
+}
+.education_container .box img{
+  width: 15rem;
+  height: 11rem;
+  object-fit: cover;
+}
+
+.education_container .box .education_info{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.education_container .box .education_info h4{
+  color: green;
+  font-weight: 550;
+}
+.education_container .box .education_info h3{
+  color: rgb(0, 0, 166);
+  font-size: 1.4rem;
+}
+
+
+@media (max-width: 912px){
+  .educationPage{
+    text-align: center;
+  }
+  .educationPage .qoute{
+    margin: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .education_container .box{
+    flex-direction: column;
+    width:22rem;
+    height: fit-content;
+  }
+
+  .education_container .box image{
+    width: 22rem;
+  }
+  .education_container .box img{
+    width: 22rem;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.education-animate{
+  opacity: 1; /* Set opacity to 1 when the animation is triggered */
+  transform: scaleX(1) scaleY(1);
+}
+
+
+
+
+/* *************  Footer css starts ************** */
+
+.footer{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 24%, rgb(18, 43, 77) 100%);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .footer-box-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 1rem 3rem;
+  gap: 1rem;
+}
+
+.footer .footer-box-container .box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+  color: white;
+  gap:1rem;
+  width: 39%;
+  height: fit-content;
+}
+
+.footer-box-container .box p .fas{
+  color: rgb(0, 212, 231);
+}
+  
+.credit{
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.credit .credit-name{
+color: white;
+}
+
+.credit .fa-heart{
+  color: rgb(255, 0, 0);
+}
+
+hr{
+  width: 70%;
+}
+
+
+@media (max-width: 912px){
+
+  .footer .footer-box-container{
+    flex-direction: column;
+  }
+  hr{
+  width: 90%;
+  }
+  .footer .footer-box-container .box{
+    width: fit-content;
+  }
+}
+
+
+
+
+
+
+
+
+
+
