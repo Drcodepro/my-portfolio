@@ -191,7 +191,7 @@ aboutObserver.observe(aboutPage);
         "desc": "Shows expenses based on year and month.",
         "image": "./project_photos/expenseTrackerss.png",
         "links": {
-          "view": "https://dr-expense-tracker.netlify.app/",
+          "view": "https://expense-tracker-my-mini.netlify.app/",
           "code": "https://github.com/Drcodepro/Expenses_tracker"
         }
       },
