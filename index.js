@@ -21,11 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
     navbar.classList.toggle('nav-toggle');
   });
 
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.navbar ul li a').forEach(function(link) {
+    link.addEventListener('click', function () {
+      menuButton.classList.remove('fa-times');
+      navbar.classList.remove('nav-toggle');
+    });
+  });
+
   window.addEventListener('scroll', function () {
     menuButton.classList.remove('fa-times');
     navbar.classList.remove('nav-toggle');
   });
 });
+
 
 
 const myImage = document.getElementById('my_image');
