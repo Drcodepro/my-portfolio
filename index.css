@@ -78,6 +78,10 @@ html::-webkit-scrollbar-thumb{
   text-decoration-color: rgba(255, 255, 255, 1);;
 }
 
+.share .fab{
+  color: rgb(0, 179, 255);
+  text-decoration: none;
+}
 
 /* *******   css for toggle the nav bar   *********** */
 
